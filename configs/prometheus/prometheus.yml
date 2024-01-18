@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'Sender'
+    static_configs:
+      - targets: ['host.docker.internal:5072']
+
+  - job_name: 'Receiver'
+    static_configs:
+      - targets: ['host.docker.internal:5071']
